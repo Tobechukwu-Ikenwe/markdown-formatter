@@ -45,19 +45,19 @@ npm run dev
 
 ## Deployment
 
-### Vercel
+### Render
 
-The project is configured for seamless deployment to Vercel via the root `vercel.json`.
+The project is configured for deployment to **Render** as a Static Site.
 
-- **Build Command**: `npm run build` (in the `frontend` directory)
-- **Output Directory**: `dist`
-- **Root Directory**: `frontend`
+#### Automatic Deployment (Blueprint)
+This repository includes a `render.yaml` file. When you connect your repository to Render, it should automatically detect this file and configure the service.
 
-To deploy using the Vercel CLI:
-
-```bash
-vercel
-```
+#### Manual Configuration
+If you prefer manual setup on the Render dashboard:
+1. Create a new **Static Site**.
+2. **Root Directory**: `frontend`
+3. **Build Command**: `npm install && npm run build`
+4. **Publish Directory**: `dist` (Note: since root is `frontend`, this is relative to that directory)
 
 ## License
 
